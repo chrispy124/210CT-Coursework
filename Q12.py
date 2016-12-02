@@ -33,7 +33,7 @@ def postorder(tree):
     print (tree.value)
   
 
-def in_order(tree):
+def in_order(tree): #in Order function, iteration used
     if(tree.left!=None):
         NodeOne= tree
         ListOne = []
@@ -43,7 +43,7 @@ def in_order(tree):
         ListOne.append(NodeOne)
         NodeOne = NodeOne.left
 
-        if len(ListOne) == 0:
+        if len(ListOne) == 0: #Base Case
             return
         NodeOne = ListOne.pop()
         print(NodeOne.value)
@@ -52,7 +52,7 @@ def in_order(tree):
             NodeOne = ListOne.pop()
             print(NodeOne.value)
 
-        NodeOne = NodeOne.right
+        NodeOne = NodeOne.right #This will assign the node to the correct branch
 
 if __name__ == '__main__':
     
