@@ -3,7 +3,7 @@ def SequenceMax(Input):
     num = 0
     last = []
 
-    for i in range(len(Input)-1):
+    for i in range(len(Input)-1): #compares the elements to work out the length of the sequence
         if i == 0:
             temporary.append(Input[i])
 
@@ -17,9 +17,9 @@ def SequenceMax(Input):
                 temporary = []
                 temporary.append(Input[i])
 
-    last.append(temporary)
+    last.append(temporary) #adds to the final list
 
-    for i in range(len(last)):
+    for i in range(len(last)): #tests which sub sequence is the biggest length
         if i == 0:
             num = len(last[i])
             Input = last[i]
@@ -32,4 +32,3 @@ def SequenceMax(Input):
 Input = [6, 7, 8, 9, 10, 5, 7, 3, 6, 4, 3, 6]
 
 print(SequenceMax(Input))
-                
